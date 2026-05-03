@@ -8,7 +8,6 @@
 
 <body>
 
-<!-- Dark Mode -->
 <button onclick="toggleDarkMode()" id="themeBtn">🌙 Dark Mode</button>
 
 <h1>University of Calcutta SGPA Calculator</h1>
@@ -26,18 +25,35 @@
   <input type="text" id="percentage" readonly>
 </div>
 
-<!-- Yearly Marks Calculator -->
+<!-- Grade Prediction -->
+<div class="card">
+  <h2>Grade Prediction (CU)</h2>
+
+  <input type="number" id="gradeSGPA" placeholder="Enter SGPA">
+
+  <button onclick="predictGradeCU()">Predict</button>
+
+  <p>Grade: <span id="cuGrade"></span></p>
+  <p>Remark: <span id="cuRemark"></span></p>
+</div>
+
+<!-- Yearly Calculator -->
 <div class="card">
   <h2>Yearly Marks Calculator (CU)</h2>
 
-  <input type="number" id="yearSGPA" placeholder="Enter SGPA">
+  <!-- ODD SEM -->
+  <h3>Odd Semester</h3>
+  <input type="number" id="oddSGPA" placeholder="Enter Odd Sem SGPA">
 
-  <h3>Subjects</h3>
+  <div id="oddContainer"></div>
+  <button onclick="addSubject('oddContainer')">➕ Add Subject</button>
 
-  <!-- Dynamic subjects will appear here -->
-  <div id="subjectsContainer"></div>
+  <!-- EVEN SEM -->
+  <h3>Even Semester</h3>
+  <input type="number" id="evenSGPA" placeholder="Enter Even Sem SGPA">
 
-  <button onclick="addSubject()">➕ Add Subject</button>
+  <div id="evenContainer"></div>
+  <button onclick="addSubject('evenContainer')">➕ Add Subject</button>
 
   <br><br>
 
@@ -54,4 +70,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
