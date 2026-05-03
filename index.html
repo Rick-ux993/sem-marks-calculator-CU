@@ -29,21 +29,29 @@
 <div class="card">
   <h2>Yearly Marks Calculator (CU)</h2>
 
-  <!-- ODD SEM -->
-  <h3>Odd Semester</h3>
-  <input type="number" id="oddSGPA" placeholder="Enter Odd Sem SGPA">
+  <div class="semContainer">
 
-  <div id="oddContainer"></div>
-  <button onclick="addSubject('oddContainer')">➕ Add Subject</button>
+    <!-- ODD SEM -->
+    <div class="semBox">
+      <h3>Odd Semester</h3>
+      <input type="number" id="oddSGPA" placeholder="Enter Odd Sem SGPA">
 
-  <!-- EVEN SEM -->
-  <h3>Even Semester</h3>
-  <input type="number" id="evenSGPA" placeholder="Enter Even Sem SGPA">
+      <div id="oddContainer"></div>
+      <button onclick="addSubject('oddContainer')">➕ Add Subject</button>
+    </div>
 
-  <div id="evenContainer"></div>
-  <button onclick="addSubject('evenContainer')">➕ Add Subject</button>
+    <!-- EVEN SEM -->
+    <div class="semBox">
+      <h3>Even Semester</h3>
+      <input type="number" id="evenSGPA" placeholder="Enter Even Sem SGPA">
 
-  <br><br>
+      <div id="evenContainer"></div>
+      <button onclick="addSubject('evenContainer')">➕ Add Subject</button>
+    </div>
+
+  </div>
+
+  <br>
 
   <button onclick="calculateYear()">Calculate</button>
   <button onclick="resetYear()">Reset</button>
@@ -53,7 +61,7 @@
     <p>Obtained Marks: <span id="obtainedMarks"></span></p>
     <p>Overall Percentage: <span id="overallPercent"></span></p>
   </div>
-</div>
+                                                         </div>
   
   <!-- Grade Prediction -->
 <div class="card">
