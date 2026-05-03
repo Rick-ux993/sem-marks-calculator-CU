@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CU SGPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Dark Mode -->
+<button onclick="toggleDarkMode()" id="themeBtn">🌙 Dark Mode</button>
+
+<h1>University of Calcutta SGPA Calculator</h1>
+
+<!-- SGPA → Percentage -->
+<div class="card">
+  <h2>SGPA → Percentage</h2>
+
+  <input type="number" id="sgpa" placeholder="Enter SGPA">
+
+  <button onclick="convertSGPA()">Calculate</button>
+  <button onclick="resetSGPA()">Reset</button>
+
+  <p>Your Percentage:</p>
+  <input type="text" id="percentage" readonly>
+</div>
+
+<!-- Yearly Marks Calculator -->
+<div class="card">
+  <h2>Yearly Marks Calculator (CU)</h2>
+
+  <input type="number" id="yearSGPA" placeholder="Enter SGPA">
+
+  <h3>Subjects</h3>
+
+  <!-- Dynamic subjects will appear here -->
+  <div id="subjectsContainer"></div>
+
+  <button onclick="addSubject()">➕ Add Subject</button>
+
+  <br><br>
+
+  <button onclick="calculateYear()">Calculate</button>
+  <button onclick="resetYear()">Reset</button>
+
+  <div class="result">
+    <p>Total Marks: <span id="totalMarks"></span></p>
+    <p>Obtained Marks: <span id="obtainedMarks"></span></p>
+    <p>Overall Percentage: <span id="overallPercent"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
