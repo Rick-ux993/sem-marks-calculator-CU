@@ -53,7 +53,7 @@ function addSubject(containerId) {
 
   div.innerHTML = `
     <label>Subject ${count} Total Marks:</label>
-    <input type="number" class="subjectMarks" placeholder="Enter marks">
+    <input type="number" class="subjectMarks" placeholder="Enter total marks">
     <button onclick="removeSubject(this, '${containerId}')">❌</button>
   `;
 
