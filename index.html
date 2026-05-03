@@ -25,18 +25,6 @@
   <input type="text" id="percentage" readonly>
 </div>
 
-<!-- Grade Prediction -->
-<div class="card">
-  <h2>Grade Prediction (CU)</h2>
-
-  <input type="number" id="gradeSGPA" placeholder="Enter SGPA">
-
-  <button onclick="predictGradeCU()">Predict</button>
-
-  <p>Grade: <span id="cuGrade"></span></p>
-  <p>Remark: <span id="cuRemark"></span></p>
-</div>
-
 <!-- Yearly Calculator -->
 <div class="card">
   <h2>Yearly Marks Calculator (CU)</h2>
@@ -66,7 +54,19 @@
     <p>Overall Percentage: <span id="overallPercent"></span></p>
   </div>
 </div>
+  
+  <!-- Grade Prediction -->
+<div class="card">
+  <h2>Grade Prediction (CU)</h2>
 
+  <input type="number" id="gradeSGPA" placeholder="Enter SGPA" min="0" max="10" step="0.01">
+
+  <button onclick="predictGradeCU()">Predict</button>
+
+  <p>Grade: <span id="cuGrade"></span></p>
+  <p>Remark: <span id="cuRemark"></span></p>
+</div>
+  
 <script src="script.js"></script>
 
 </body>
