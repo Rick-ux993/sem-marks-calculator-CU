@@ -52,7 +52,7 @@ function addSubject(containerId) {
   div.classList.add("subjectRow");
 
   div.innerHTML = `
-    <label>Subject ${count} Marks:</label>
+    <label>Subject ${count} Total Marks:</label>
     <input type="number" class="subjectMarks" placeholder="Enter marks">
     <button onclick="removeSubject(this, '${containerId}')">❌</button>
   `;
@@ -60,26 +60,22 @@ function addSubject(containerId) {
   container.appendChild(div);
 }
 
-
-// ❌ Remove Subject
 function removeSubject(btn, containerId) {
   btn.parentElement.remove();
   updateLabels(containerId);
 }
 
 
-// 🔄 Update Labels
 function updateLabels(containerId) {
   let rows = document.querySelectorAll(`#${containerId} .subjectRow`);
 
   rows.forEach((row, index) => {
     row.querySelector("label").innerText =
-      `Subject ${index + 1} Marks:`;
+      `Subject ${index + 1} Total Marks:`;
   });
 }
 
 
-// 📊 Yearly Calculation
 function calculateYear() {
   let oddSGPA = parseFloat(document.getElementById("oddSGPA").value);
   let evenSGPA = parseFloat(document.getElementById("evenSGPA").value);
