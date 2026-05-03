@@ -90,7 +90,6 @@ body.dark button {
   color: white;
 }
 
-/* Mobile Friendly */
 @media (max-width: 400px) {
   .card {
     width: 90%;
@@ -116,4 +115,25 @@ body.dark button {
   color: white;
   border-radius: 50%;
   padding: 6px 10px;
+}
+
+.semContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.semBox {
+  flex: 1;
+}
+
+.semBox input {
+  width: 90%;
+}
+
+@media (max-width: 600px) {
+  .semContainer {
+    flex-direction: column;
+  }
 }
